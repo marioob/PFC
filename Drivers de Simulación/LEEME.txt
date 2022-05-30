@@ -1,0 +1,2 @@
+Deben copiarse todos los ficheros a la carpeta:
+C:\Archivos de programa\IVI\Bin

@@ -1,0 +1,2107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><!--lithium user=38566 -->
+
+
+<style type="text/css" id="lithiumcss">
+<!--
+body				{ color: #666666; font: 10pt Arial,Arial,Helvetica; padding: 0px; scrollbar-face-color: #; scrollbar-arrow-color: #; scrollbar-track-color: #; scrollbar-darkshadow-color: #; scrollbar-3dlight-color: #; scrollbar-shadow-color: #; scrollbar-highlight-color: #;  }
+table, td			{ color: #666666; font: 10pt Arial,Arial,Helvetica; }
+a					{ color: #3366CC; text-decoration: none; }
+a:hover			{ text-decoration: underline; }
+.text_normal		{ font-size: 10pt; }
+.text_small			{ font-size: 9pt; }
+.text_smallest		{ font-size: 8pt; }
+.main_table			{ background-color: #E1E1E1; width: 100%; }
+.table_bg			{ background-color: #E1E1E1; }
+.mod_unread			{ background-color: #FFFFFF !important }
+
+.descbar			{ color: #666666;		font-size: 9pt; ; padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; background-color: #FFFFFF;  background-repeat: repeat-x; }
+.descbar_text		{ color: #666666;		font-size: 9pt;   }
+																		              																		
+.headingbar			{ color: #666666;	font-size: 9pt;  font-weight: bold;  padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; background-color: #E6EFF6;	 }
+.headingbar_text	{ color: #666666;	font-size: 9pt;  font-weight: bold;   }
+																		              																		
+.navbar				{ color: #000000;		font-size: 9pt;  padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; background-color: #FFFFFF;	 }
+.navbar_sep			{ color: #989898;	font-size: 9pt;  }
+.navbar_text		{ color: #000000;		font-size: 9pt;   }
+.navbar_link		{ color: #3366CC;		font-size: 9pt;   }
+																		              																		
+.titlebar			{ color: #000000;	font-size: 13pt;  font-weight: bold; 	padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; background-color: #FFFFFF;  }
+.titlebar_text		{ color: #000000;	font-size: 13pt;  font-weight: bold;   }
+																		              																		
+.userbar			{ color: #3366cc;		font-size: 9pt; 	padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; background-color: #E6EFF6;  }
+.userbar_text		{ color: #3366cc;		font-size: 9pt;   }
+																		              																		
+.searchbar			{ color: #3366CC;	font-size: 9pt; 	padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; background-color: #E6EFF6;  }
+.searchbar_text		{ color: #3366CC;	font-size: 9pt; 	 text-decoration: underline;  }
+																		              																		
+.subjectbar			{ color: #000000;	font-size: 12pt;  font-weight: bold; 	padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; background-color: #E6E6E6;  }
+.subjectbar_text	{ color: #000000;	font-size: 12pt; 	font-weight: bold;   }
+																																				 
+.tabbar				{ color: #FFFFFF;			font-size: 9pt;	padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; background-color: #FFFFFF;  }
+.tabbar_text		{ color: #FFFFFF;			font-size: 9pt;	}
+
+
+.linear_paging_text 	{ color: #3366CC; background-color: #E6EFF6; }
+.linear_paging_text a	{ color: #3366CC; background-color: #E6EFF6; }
+
+
+.menubar_standalone { color: #3366CC;		 font-size: 12px; padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px;  background-color: #E6EFF6; }
+.menubar			{  background-color: #E6EFF6; }
+.menubar_normal		{ background-color: #E6EFF6; }
+.menubar_highlight	{ background-color: #C1D6E7; }
+.menubar_selected	{ background-color: #C1D6E7; }
+.menubar_shadow		{ background-color: #E6EFF6; }
+.menubar_text		{ font-size: 12px; color: #3366CC; vertical-align: middle; }
+.menubar_text_dis	{ font-size: 12px; color: #989898; vertical-align: middle; }
+.clickable			{ cursor: pointer; }
+.disabled			{ cursor: not-allowed; }
+.dropdown_menu		{ position: absolute; }
+
+.cell_1				{  background-color: #FFFFFF; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; background-repeat: repeat-x; }
+.cell_2				{  background-color: #F6F6F6; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; background-repeat: repeat-x; }
+.cell_hi			{  background-color: #FFFFFF; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; background-repeat: repeat-x; }
+.cell_hi2			{  background-color: #FFFFFF; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; background-repeat: repeat-x; }
+.cell_sel			{ background-color: #FFFFFF; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; background-repeat: repeat-x; }
+.cell_small_1		{  background-color: #FFFFFF; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; font-size: 9pt; }
+.cell_small_2		{  background-color: #F6F6F6; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; font-size: 9pt; }
+.cell_small_hi		{  background-color: #FFFFFF; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; font-size: 9pt; }
+.cell_small_hi2		{  background-color: #FFFFFF; padding-left: 5px; padding-right: 5px; padding-top: 4px; padding-bottom: 4px; font-size: 9pt; }
+.cell_tiny			{ font-size: 8pt; padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; }
+
+.admin_page			{  background-color: #FFFFFF; padding: 10px; }
+.info_box			{  background-color: #F6F6F6; padding: 10px; border: 1px solid #E1E1E1; background-repeat: repeat-x; }
+.cell				{  background-color: #FFFFFF; padding: 10px; background-repeat: repeat-x; }
+.heading1			{ font-weight: bold; font-size: 12pt;	margin-bottom: 5px; }
+.heading2			{ font-weight: bold; font-size: 11pt;	margin-bottom: 5px; }
+.heading3			{ font-weight: bold; font-size: 10pt;			margin-bottom: 5px; }
+
+.title_huge			{ font-family: Tahoma, Arial, Helvetica; font-size: 18px; font-weight: bold; color: #3366CC; text-decoration: none; margin-bottom: 5px; }
+.title_big			{ font-weight: bold; font-size: 11pt; margin-bottom: 5px; }
+.title				{ font-weight: bold; font-size: 10pt; margin-bottom: 5px; }
+.title_small		{ font-weight: bold font-size: 9pt; margin-bottom: 5px; }
+.link				{ font-weight: bold; text-decoration: underline; }
+.input				{ color: #000000; background-color: #FFFFFF; font: 8pt Geneva,Arial,sans-serif; border-top: #7F9DB9 solid thin; border-bottom: #7F9DB9 solid thin; border-left: #7F9DB9 solid thin; border-right: #7F9DB9 solid thin; }
+.input_error		{ color: #000000; background-color: #FFFFFF; font: 8pt Geneva,Arial,sans-serif; border-top: #CC0000 solid thin; border-bottom: #CC0000 solid thin; border-left: #CC0000 solid thin; border-right: #CC0000 solid thin; }
+.choicebox			{ }
+.choicebox_error	{ border: solid thin #CC0000; }
+.button				{ color: #FFFFFF; background-color: #065FA3; font: bold 9pt Geneva,Arial,sans-serif; border: solid thin #FFFFFF; cursor: pointer; padding-left: 10px; padding-right: 10px; margin: 2px; }
+.help_text			{ font-size: 8pt; margin-top: 5px; margin-bottom: 5px; }
+.error_text			{ color: #CC0000; font-weight: bold; font-size: 9pt; margin-top: 5px; margin-bottom: 5px; }
+
+
+.msg_user_cell		{  background-color: #F6F6F6; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; background-repeat: repeat-x; }
+.msg_date_cell		{ background-color: #F6F6F6; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 15px; background-repeat: repeat-x; }
+.msg_text_cell		{ font-size: 10pt;  background-color: #FFFFFF; padding-left: 10px; padding-right: 10px; padding-top: 15px; padding-bottom: 15px; background-repeat: repeat-x; }
+.msg_text_cell a	{ text-decoration: underline; }
+.msg_rating_cell	{ font-size: 10pt; background-color: #FFFFFF; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 12px; text-align: right; }
+
+
+.subj_read			{ font-size: 10pt; color: #3366CC;	  }
+.subj_unread		{ font-size: 10pt; color: #3366CC;  font-weight: bold;   }
+.date_text			{ color: #000000;   }
+.time_text			{ color: #000000;   }
+.count_text			{ color: #000000;   }
+.count_new_text		{ color: #000000;   }
+.auth_text			{ font-size: 10pt; color: #3366CC;   }
+
+.list_text			{ color: #3366CC;	font-weight: bold; font-size: 11pt;  }
+-->
+</style>
+
+
+	<script language="javascript">
+	var img_thread_collapse = "/ni/i/button_thread_collapse.gif";
+	var img_thread_expand = "/ni/i/button_thread_expand.gif";
+	</script>
+
+	<script language="javascript" src="MensajeForo_files/js_774080.js" type="text/javascript"></script><title>How to add a Simulation Driver Software Module? - Instrument Control (GPIB, Serial, VISA, IVI) - NI Discussion Forums</title>
+
+	
+	
+	<meta name="ContentClass" content="Community"> 
+<meta name="ContentType" content="CommunityDiscussions"><style type="text/css" id="_noscript_styled">.-noscript-blocked { border: 1px solid red !important; background: white url("chrome://noscript/skin/icon32.png") no-repeat left top !important; opacity: 0.6 !important; }</style></head>
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body style="margin: 10px 0px 5px;" topmargin="10" leftmargin="0" link="#3366cc" alink="#884488" bgcolor="#ffffff" marginheight="10" marginwidth="0" text="#666666" vlink="#884488">
+	<a href="#content" title="Saltar la navegación y sigue al contenido principal"></a>
+<center>
+
+<script language="javascript">
+function user_id() {
+	return 38566;
+}
+function user_login() {
+	return "marioob_";
+}
+</script>
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+
+
+
+
+<!--stopindex--><span class="noindex">
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td><img src="MensajeForo_files/invis.gif" border="0" height="1" width="8"></td>
+		<td>	
+		<!-- Begin Utility Logo -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="750">
+	<tbody>
+	<tr>
+		<td nowrap="nowrap" valign="top" width="157"><a href="http://www.ni.com/"><img src="MensajeForo_files/logo.gif" alt="NI Home" border="0" height="64" width="157"></a></td>
+		<td align="right" nowrap="nowrap" valign="middle" width="593"><form name="search" action="http://search.ni.com/nisearch/jsp/forward.jsp"><a href="http://sine.ni.com/apps/we/nios.store?lang=us&amp;action=view_cart"><img src="MensajeForo_files/cart.gif" alt="" border="0" height="8" width="12"></a> <a href="http://sine.ni.com/apps/we/nios.store?lang=us&amp;action=view_cart" class="global">view cart</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.ni.com/help/" class="global">help</a>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="fineprint">search</span>&nbsp;<select name="scope" class="fineprint"><option selected="selected" value="exchange">Discussion Forums</option><option value="DZone">NI Developer Zone</option><option value="site">Entire Site</option></select> <input name="query" size="16" maxlength="254" class="fineprint" type="text">&nbsp;<input src="MensajeForo_files/search_go.gif" alt="Search" align="top" type="image"></form><!--NOTES_FORM_TAG2--></td>
+	</tr>
+	</tbody>
+</table>
+
+
+<!-- End Utility Logo -->
+
+<!-- Begin Global Navigation -->
+<map name="globalnav"><area shape="rect" title="Company" alt="Company" coords="684,0,751,19" href="http://www.ni.com/company/"><area shape="rect" title="Events" alt="Events" coords="629,0,682,19" href="http://www.ni.com/events"><area shape="rect" title="Academic" alt="Academic" coords="557,0,627,19" href="http://www.ni.com/academic/"><area shape="rect" title="NI Developer Zone" alt="NI Developer Zone" coords="441,0,555,19" href="http://zone.ni.com/zone/jsp/zone.jsp"><area shape="rect" title="Support" alt="Support" coords="378,0,439,19" href="http://www.ni.com/support/"><area shape="rect" title="Solutions" alt="Solutions" coords="307,0,376,19" href="http://www.ni.com/solutions/"><area shape="rect" title="Products &amp; Services" alt="Products &amp; Services" coords="180,0,305,19" href="http://www.ni.com/products/"><area shape="rect" title="Contact NI" alt="Contact NI" coords="91,0,179,19" href="http://sine.ni.com/apps/we/nicc.call_me?p_lang_id=US"><area shape="rect" title="MyNI" alt="MyNI" coords="0,0,90,19" href="http://my.ni.com/myni/myni"></map>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		  <tbody><tr height="20" valign="bottom">
+		    <td rowspan="2" width="750"><img src="MensajeForo_files/devzone1_on.gif" usemap="#globalnav" border="0" height="20" width="752"></td>
+		    <td background="MensajeForo_files/globalbar.gif" bgcolor="#6c96ce" width="100%"><img src="MensajeForo_files/invis.gif" alt="" border="0" height="20" width="1"></td>
+		  </tr>
+		</tbody></table>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr>
+				<td colspan="4"><img src="MensajeForo_files/invis.htm" alt="" border="0" height="6" width="1"></td>
+			</tr>
+			<tr valign="top">
+
+<!--  Begin Breadcrumb -->
+								<td style="font-size: 9px; letter-spacing: 1px; font-family: Arial,Helvetica,sans-serif;" align="left" nowrap="nowrap" width="1%">You are here: <br>
+				<img src="MensajeForo_files/invis.htm" alt="" border="0" height="1" width="1"></td>
+				<td style="font-size: 9px; letter-spacing: 1px; font-family: Arial,Helvetica,sans-serif;" align="left" width="99%"><a href="http://www.ni.com/">NI Home</a> &gt; <a href="http://zone.ni.com/zone/jsp/zone.jsp">NI Developer Zone</a> &gt; NI Discussion Forums<br><br><img src="MensajeForo_files/invis.gif" alt="" border="0" height="1" width="1"></td>
+<!-- End Breadcrumb -->
+
+<!-- Begin Language Dropdown -->
+
+<td width="1%"> </td>
+<td align="right" nowrap="nowrap" valign="top">
+<script language="JavaScript">
+<!--
+function urlSelect(form, sel) {
+adrs = sel.options[sel.selectedIndex].value;
+if (adrs != "-" ) location.href = adrs;
+}
+// -->
+</script>
+<form method="post" name="link" style="padding: 0pt 5px 0pt 0pt;">
+<select name="selLink" onchange="urlSelect(this.form, this)"><option value="-" selected="selected">Select Community</option><option value="http://forums.ni.com/ni?category.id=ZHSForum">Chinese (Simplified)</option><option value="http://forums.ni.com/ni?category.id=top">English</option><option value="http://forums.ni.com/ni?category.id=FrenchForums">French</option><option value="http://forums.ni.com/ni?category.id=JPForum">Japanese</option></select>
+</form>
+<!-- End Language Dropdown -->
+
+								</td>
+			</tr>
+		</tbody></table>
+		</td></tr>
+	
+</tbody></table>
+<br style="clear: left;">
+<!-- End Global Navigation -->
+		
+	
+
+
+
+
+			<a name="content"></a>
+
+		
+	
+
+		
+		
+		
+
+
+
+
+
+
+
+
+	<table class="main_table" id="main_table" style="width: 98%;" border="0" cellpadding="0" cellspacing="1" width="98%">
+			
+	
+		
+
+
+
+
+
+
+	
+<tbody><tr><td colspan="1" class="titlebar">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<form name="dropdown"></form>
+	<tbody><tr><td class="titlebar_text">
+		
+			<a href="http://forums.ni.com/ni/board?board.id=140" class="titlebar_text" onmouseover="self.status='Subir un nivel';return true;">Instrument Control (GPIB, Serial, VISA, IVI)</a>
+			
+		</td>
+		<td class="titlebar_text" align="right">
+		
+			
+
+
+
+
+
+
+
+
+
+
+		<select name="board" id="lidropdown" class="input" style="width: 250px;" onchange="javascript:go(document.forms.dropdown.board.options[document.forms.dropdown.board.selectedIndex].value, parent)"><option value="">Ir a...</option><option value="/ni/user_bookmarks">Favoritos:
+					
+					</option><option value="/ni/board/message?board.id=140&amp;message.id=9942#M9942">&nbsp;&nbsp;Mensajes: How to add a Simulation Driver Software Module?
+					
+				</option><option value="">
+				
+			</option><option value="/ni?category.id=MostActiveSoftwareBoards">== Most Active Software Boards ==
+			
+				</option><option value="">-- Foros --
+				
+			</option><option value="/ni/board?board.id=170">LabVIEW
+			
+			</option><option value="/ni/board?board.id=180">LabWindows/CVI
+			
+			</option><option value="/ni/board?board.id=231">Measurement Studio for VC++ 
+			
+			</option><option value="/ni/board?board.id=230">Measurement Studio for VB6
+			
+			</option><option value="/ni/board?board.id=232">Measurement Studio for .NET Languages
+			
+			</option><option value="/ni/board?board.id=330">TestStand
+			
+			</option><option value="/ni/board?board.id=190">Lookout
+			
+			</option><option value="/ni/board?board.id=60">DIAdem
+			
+			</option><option value="">&nbsp;
+			
+			</option><option value="/ni?category.id=MostActiveHardwareBoards">== Most Active Hardware Boards ==
+			
+				</option><option value="">-- Foros --
+				
+			</option><option value="/ni/board?board.id=140">Instrument Control (GPIB, Serial, VISA, IVI)
+			
+			</option><option value="/ni/board?board.id=250">Multifunction DAQ
+			
+			</option><option value="/ni/board?board.id=70">Digital I/O
+			
+			</option><option value="/ni/board?board.id=40">Counter/Timer
+			
+			</option><option value="/ni/board?board.id=300">Signal Conditioning
+			
+			</option><option value="/ni/board?board.id=110">FieldPoint Family
+			
+			</option><option value="/ni/board?board.id=270">PXI
+			
+			</option><option value="/ni/board?board.id=240">Motion Control and Motor Drives
+			
+			</option><option value="/ni/board?board.id=200">Machine Vision
+			
+			</option><option value="">&nbsp;
+			
+			</option><option value="/ni?category.id=AdditionalProducts">== Additional NI Product Boards ==
+			
+				</option><option value="">-- Foros --
+				
+			</option><option value="/ni/board?board.id=10">Academic Products (LabVIEW SE, NI-ELVIS, Multisim)
+			
+			</option><option value="/ni/board?board.id=20">BioBench
+			
+			</option><option value="/ni/board?board.id=30">CAN &amp; DeviceNet
+			
+			</option><option value="/ni/board?board.id=50">DASYLab
+			
+			</option><option value="/ni/board?board.id=80">Digital Multimeters (DMMs)
+			
+			</option><option value="/ni/board?board.id=90">Driver Development Kit (DDK)
+			
+			</option><option value="/ni/board?board.id=100">Dynamic Signal Acquisition
+			
+			</option><option value="/ni/board?board.id=120">FOUNDATION Fieldbus
+			
+			</option><option value="/ni/board?board.id=150">High-Speed Digitizers
+			
+			</option><option value="/ni/board?board.id=160">HiQ
+			
+			</option><option value="/ni/board?board.id=360">Hyperception (RIDE, VAB)
+			
+			</option><option value="/ni/board?board.id=210">MATRIXx
+			
+			</option><option value="/ni/board?board.id=220">Measure
+			
+			</option><option value="/ni/board?board.id=260">Profibus
+			
+			</option><option value="/ni/board?board.id=280">Real-Time Measurement and Control
+			
+			</option><option value="/ni/board?board.id=290">RF Measurement Devices
+			
+			</option><option value="/ni/board?board.id=310">Signal Generators
+			
+			</option><option value="/ni/board?board.id=320">Switch Hardware and Software
+			
+			</option><option value="/ni/board?board.id=340">VirtualBench
+			
+			</option><option value="/ni/board?board.id=350">VXI and VME
+			
+			</option><option value="">&nbsp;
+			
+			</option><option value="/ni?category.id=SpecialInterest">== Special Interest Boards ==
+			
+				</option><option value="">-- Foros --
+				
+			</option><option value="/ni/board?board.id=BreakPoint">BreakPoint
+			
+			</option><option value="/ni/board?board.id=130">Feedback on NI Discussion Forums
+			
+			</option><option value="/ni/board?board.id=JobPost">LabVIEW Job Openings
+			
+			</option><option value="/ni/board?board.id=JobSearch">LabVIEW Developers Seeking Employment
+			
+			</option><option value="">&nbsp;
+			
+			</option><option value="/ni?category.id=FrenchForums">== La Communauté Française ==
+			
+				</option><option value="">-- Foros --
+				
+			</option><option value="/ni/board?board.id=4170">Discussions De Produit de NI
+			
+			</option><option value="">&nbsp;
+			
+			</option><option value="/ni?category.id=ZHSForum">== NI中文技术论坛 ==
+			
+				</option><option value="">-- Foros --
+				
+			</option><option value="/ni/board?board.id=2170">NI LabVIEW,CVI,数据采集等产品讨论区
+			
+			</option><option value="">&nbsp;
+			
+			</option><option value="/ni?category.id=JPForum">== ディスカッションフォーラム（日本語） ==
+			
+				</option><option value="">-- Foros --
+				
+			</option><option value="/ni/board?board.id=1170">NI製品ディスカッション
+			
+			</option><option value="">&nbsp;
+			
+	</option></select>
+	
+
+			
+		</td></tr>
+		
+	</tbody></table>
+	</td></tr>
+		
+		
+
+
+
+
+
+
+
+		<tr><td colspan="1" class="userbar">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+		
+			<tbody><tr><td class="userbar_text" width="100%">
+				<a href="http://forums.ni.com/ni/view_profile?user.id=38566" class="userbar_text">marioob_</a>
+				&nbsp;:&nbsp; 
+				<a href="http://forums.ni.com/ni/action?action=user_signoff&amp;ticket=3Q2Z22gblI&amp;isoLang=es&amp;forumDU=http%3A%2F%2Fforums.ni.com%2Fni%2Fboard%2Fmessage%3Fboard.id%3D140%26message.id%3D9942" class="userbar_text">Salir</a> 
+				&nbsp;·&nbsp; 
+				<a href="http://forums.ni.com/ni/user_profile" class="userbar_text">Mi Perfil</a>
+				&nbsp;·&nbsp; 
+	 			<a href="javascript:assistant();" class="userbar_text">Mi Récord</a>
+				&nbsp;·&nbsp; 
+				<a href="http://forums.ni.com/ni/help_faq" class="userbar_text">Ayuda</a>
+				
+				
+			</td>
+			
+			<td class="userbar_text" align="right"><img src="MensajeForo_files/p.gif" alt="" height="15" width="1"><br></td>
+			
+		</tr>
+		</tbody></table>
+		</td></tr>
+		
+		
+		
+
+
+
+
+
+			<tr><td colspan="1" class="navbar">            
+			
+					<a href="http://forums.ni.com/ni/" class="navbar_link">NI Discussion Forums</a> <span class="navbar_sep">:</span> 
+					
+					<a href="http://forums.ni.com/ni?category.id=MostActiveHardwareBoards" class="navbar_link">Most Active Hardware Boards</a> <span class="navbar_sep">:</span> 
+					
+					<a href="http://forums.ni.com/ni/board?board.id=140" class="navbar_link">Instrument Control (GPIB, Serial, VISA, IVI)</a> <span class="navbar_sep">:</span> 
+					
+					<span class="navbar_text">How to add a Simulation Driver Software Module?</span>
+					
+			</td></tr>
+			
+		
+<tr><td colspan="1" class="menubar">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+	
+		<td>
+		
+			
+
+
+
+
+
+
+
+		<table class="menubar" onclick="go('/ni/board/post?board.id=140&message.reply_to_id=9942');" onmouseover="this.className='menubar_selected'" onmouseout="this.className='menubar'" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td height="28">&nbsp;&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/invis_002.gif" alt="Responder" title="Responder" border="0"></td>
+			<td>&nbsp;&nbsp;</td>
+			
+			<td nowrap="nowrap"><span class="menubar_text">Responder</span></td>
+			<td>&nbsp;&nbsp;</td>
+			
+	</tr>
+	</tbody></table>
+		
+			
+		</td>
+	
+		<td>	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td>
+		<td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td></tr>
+	</tbody></table></td>
+	
+		<td>
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+				<table class="menubar" id="opciones_del_tema_table" onclick="showLiMenu(this,'opciones_del_tema','',true);" ondblclick="showLiMenu(this,'opciones_del_tema','',true);" onmouseover="this.className='menubar_selected';" onmouseout="this.className='menubar';" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr class="clickable">
+					<td height="28">&nbsp;&nbsp;</td>
+					<td nowrap="nowrap"><span class="menubar_text">Opciones del tema</span></td>
+					<td>&nbsp;&nbsp;</td>
+					<td><img src="MensajeForo_files/button_options.gif" alt="Opciones del tema" title="Opciones del tema" border="0"></td>
+					<td>&nbsp;&nbsp;</td></tr>
+				</tbody></table>
+				
+	
+
+
+
+
+
+
+
+			<div id="opciones_del_tema" class="dropdown_menu" style="visibility: hidden;">
+			
+		
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="270">
+	<tbody><tr><td class="menubar_highlight" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	<tr><td class="menubar_highlight" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td>
+		<td style="background-color: rgb(230, 239, 246);">
+		
+		
+				
+
+
+
+
+
+		<table onclick="go('/ni/action?action=mark_thread_unread&board.id=140&message.id=9942&dest_url=%2Fni%2Fboard%3Fboard.id%3D140&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Marca el tema como nuevo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+				
+
+
+
+
+
+		<table onclick="go('/ni/action?action=mark_thread_read&board.id=140&message.id=9942&dest_url=%2Fni%2Fboard%3Fboard.id%3D140&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Marca el tema como leido</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+				<table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">
+<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+<tr><td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+</tbody></table>
+				
+					
+
+
+
+
+
+		<table onclick="go('/ni/action?action=delete_subscription&subscription.id=24747&dest_url=%2Fni%2Fboard%2Fmessage%3Fboard.id%3D140%26message.id%3D9942&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Remover este tema del top del foro</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+					
+						
+
+
+
+
+
+		<table onclick="go('/ni/action?action=bookmark_thread&board.id=140&message.id=9942&dest_url=%2Fni%2Fboard%2Fmessage%3Fboard.id%3D140%26message.id%3D9942&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Agrega este tema a mis Favoritos</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+						
+					
+
+
+
+
+
+		<table onclick="go('/ni/action?action=delete_subscription&subscription.id=12069&dest_url=%2Fni%2Fboard%2Fmessage%3Fboard.id%3D140%26message.id%3D9942&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Remover este tema de mis Notificaciones</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+					
+				<table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">
+<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+<tr><td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+</tbody></table>
+				
+					
+<table class="disabled" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr class="disabled">
+	<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+	<td nowrap="nowrap" width="100%"><span class="menubar_text_dis">Por fecha de creación</span></td>
+	<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+</tbody></table>
+					
+					
+
+
+
+
+
+		<table onclick="go('/ni/board/message?board.id=140&message.id=9942&page=1&view=by_date_ascending');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Viejo a nuevo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+					
+					
+
+
+
+
+
+		<table onclick="go('/ni/board/message?board.id=140&message.id=9942&page=1&view=by_date_descending');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Nuevo a viejo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+					
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/print?board.id=140&message.id=9942&page=1&format=page');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Página para imprimir</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+	
+
+
+
+
+		</td>
+		<td class="menubar_shadow" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td></tr>
+	<tr><td class="menubar_shadow" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	</tbody></table>
+		
+	</div></td>
+	
+	<td width="100%">&nbsp;</td>
+	<td>
+
+
+
+
+
+
+
+		<table class="menubar" onclick="go('/ni/board?board.id=140&page_of_message_id=9942');" onmouseover="this.className='menubar_selected'" onmouseout="this.className='menubar'" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td height="28">&nbsp;&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/button_message_listing.gif" alt="Indice de temas" title="Indice de temas" border="0"></td>
+			<td>&nbsp;&nbsp;</td>
+			
+			<td nowrap="nowrap"><span class="menubar_text">Indice de temas</span></td>
+			<td>&nbsp;&nbsp;</td>
+			
+	</tr>
+	</tbody></table>
+		</td>
+	<td>	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td>
+		<td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td></tr>
+	</tbody></table></td>
+	
+			<td>
+
+
+
+
+
+
+
+		<table class="menubar" onclick="go('/ni/board/message?board.id=140&message.id=9886');" onmouseover="this.className='menubar_selected'" onmouseout="this.className='menubar'" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td height="28">&nbsp;&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/button_previous_message.gif" alt="Tema anterior" title="Tema anterior" border="0"></td>
+			<td>&nbsp;&nbsp;</td>
+			
+			<td nowrap="nowrap"><span class="menubar_text">Tema anterior</span></td>
+			<td>&nbsp;&nbsp;</td>
+			
+	</tr>
+	</tbody></table>
+		</td>
+			
+		<td>	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td>
+		<td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td></tr>
+	</tbody></table></td>
+		
+			<td>
+
+
+
+
+
+
+
+		<table class="menubar" onclick="go('/ni/board/message?board.id=140&message.id=4927');" onmouseover="this.className='menubar_selected'" onmouseout="this.className='menubar'" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td height="28">&nbsp;&nbsp;</td>
+		
+			<td nowrap="nowrap"><span class="menubar_text">Próximo tema</span></td>
+			<td>&nbsp;&nbsp;</td>
+			
+			<td><img src="MensajeForo_files/button_next_message.gif" alt="Próximo tema" title="Próximo tema" border="0"></td>
+			<td>&nbsp;&nbsp;</td>
+			
+	</tr>
+	</tbody></table>
+		</td>
+			
+	</tr>
+	</tbody></table>
+	</td></tr>
+		
+
+
+
+
+
+	<tr><td colspan="1">
+		<table border="0" cellpadding="3" cellspacing="0" width="100%">
+			<tbody><tr><td style="padding-left: 10px;" class="linear_paging_text">Saltar la página: &nbsp;
+	
+			<span style="font-size: 12pt;"><b>1</b></span>
+			
+				</td>
+			</tr>
+		</tbody></table>
+	</td></tr>		
+		
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<tr id="M9942"><td colspan="1">
+		<a name="M9942"></a>
+	
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		
+	<tbody><tr>
+	
+		<td class="subjectbar" style="padding: 0px 10px;" align="left">
+		
+			
+
+
+
+
+
+
+
+
+		<table onclick="go('/ni/board/post?board.id=140&message.reply_to_id=9942');" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td>&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/invis_002.gif" alt="Responder" title="Responder" border="0"></td>
+			<td>&nbsp;</td>
+			
+			<td class="subjectbar_text" style="font-size: 9pt;" nowrap="nowrap">Responder</td>
+			<td>&nbsp;</td>
+			
+		</tr>
+		</tbody></table>
+			
+			
+	
+	</td><td bgcolor="#e1e1e1" width="1"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="1"><br></td>
+	<td class="subjectbar" style="font-size: 9pt; padding-left: 10px;" height="20" width="100%">
+		How to add a Simulation Driver Software Module?
+
+	</td>
+	
+		<td class="subjectbar" style="padding: 0px 10px 0px 0px;" align="right">
+
+
+
+
+
+
+
+
+
+
+
+
+		<table id="io_b140m9942_table" onclick="setId('9942');showLiMenu(this,'io_b140m9942','right',false);" ondblclick="setId('9942');showLiMenu(this,'io_b140m9942','right',false);" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			
+				<td nowrap="nowrap"><a class="subjectbar_text" style="font-size: 9pt;">Opciones</a></td>
+				
+			<td>&nbsp;&nbsp;</td>
+			<td><img src="MensajeForo_files/button_options.gif" alt="Opciones" title="Opciones" border="0"></td>
+			<td>&nbsp;</td></tr>
+		</tbody></table>
+		
+		</td></tr>
+		
+	<tr>
+	
+		<td class="msg_user_cell" valign="top" width="150">
+		
+			 
+
+
+
+
+
+
+
+
+
+<a href="http://forums.ni.com/ni/view_profile?user.id=38566" class="auth_text" style="font-weight: bold;">	
+<img src="MensajeForo_files/regular.gif" alt="" border="0"> <span style="color: rgb(102, 102, 102);">marioob_</span></a>
+			<br>
+			
+			<span style="font-size: 9pt;">
+			Regular<br>
+			
+			</span>
+			
+
+
+			
+			<br>
+			
+				<img src="MensajeForo_files/p.gif" alt="" border="0" height="8" width="150"><br>
+				
+			<a href="http://forums.ni.com/ni/view_profile?user.id=38566">
+
+
+
+
+
+
+
+
+
+<img src="MensajeForo_files/greenday.gif" alt="marioob_" border="2" height="36" width="36"></a><br>
+			
+
+
+			
+			<p>
+			
+
+
+
+
+
+
+<span style="font-size: 9pt; font-weight: normal;">
+Respuesta <a href="http://forums.ni.com/ni/board/message?board.id=140&amp;message.id=9942#M9942">1</a> de 3
+</span>
+
+			<br><img src="MensajeForo_files/p.gif" height="6" width="1"><br>
+			<span style="font-size: 9pt; font-weight: normal;">
+			
+					161 visitas<br>
+					
+			</span>
+			
+			
+			
+		</p></td>
+		
+		<td rowspan="2" bgcolor="#e1e1e1" width="1"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="1"><br></td>
+	
+		<td colspan="2" class="msg_text_cell" style="text-align: justify; background-color: rgb(255, 255, 255); background-image: none; background-repeat: repeat-x;" rowspan="2" valign="top" width="100%">
+			I am designing a Simulator of Instrumentation following these steps:<br>1)
+re-programming, re-compiling, and re-building the DLLs from the
+advanced class simulation drivers included in IVI Driver Toolset 2.0
+using LabWindows/CVI 7.0;<br>2) then i create a VI in LabVIEW 7.0 which calls an IVI Class Driver obtaining the desired simulated output data.<br><br>My
+problem is that I need to develop separate VIs which use the same IVI
+Class Driver, but each one of these VIs must receive different
+simulated data from the driver.<br><br>I'll try to explain it with an example...<br>after
+re-programming the source code of "nisDmm" (an Advanced Class
+Simulation Driver) to include my desired output simulated data, i build
+a Release DLL obtaining "nisDmm.dll";<br>i have 2 different and
+independent VIs in LabVIEW which call "IviDmm" (a Class Driver): one
+that receives the measured voltage and current in a resistor, and
+another one that receives the measured voltage and current in a diode;<br>i wonder if i could build a different DLL for each one of the VI, such as: "nisDmm_resistor.dll" and "nisDmm_diode.dll".<br><br>For
+each one of these situations, I'd like to create 2 different "Logical
+Names" in MAX 3.0 that use their own "Driver Session" that "Simulate
+With" their own "Simulation Driver Session" that call their respective
+"Simulation Driver Software Module"; in other words, I don't want both
+of them to call the same DLL "nisDmm.dll".<br><br><br>I know how to get
+things work in a rough manner, just by replacing the appropiate file
+"nisDmm.dll" located in the IVI Standard Root Directory, before i run
+each one of the applications in LabVIEW. However, the solution proposed
+above would be much more convenient.<br><br>I hope everyone has understood my question, and anyone can help.<br>THANK YOU VERY MUCH FOR YOUR TIME!!!	
+		</td></tr>
+		<tr>
+		
+		<td class="msg_date_cell" nowrap="nowrap" valign="bottom">
+		<span style="font-size: 9pt; font-weight: normal;">
+		 <span class="date_text">01-11-2005</span> <span class="time_text">07:42 PM</span>
+		</span>
+		</td>
+
+		
+		</tr>
+	</tbody></table>
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+			<div id="io_b140m9942" class="dropdown_menu" style="visibility: hidden;">
+			
+		
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="270">
+	<tbody><tr><td class="menubar_highlight" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	<tr><td class="menubar_highlight" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td>
+		<td style="background-color: rgb(230, 239, 246);">
+		
+	
+						
+
+
+
+
+
+		<table onclick="go('/ni/action?action=delete_subscription&subscription.id=12140&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Quita este mensaje de mis Favoritos</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+						
+						
+
+
+
+
+
+		<table onclick="go('/ni/action?action=subscribe_message&board.id=140&message.id=9942&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Notifícame cuando hay nuevas respuestas</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+						
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">
+<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+<tr><td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+</tbody></table>
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/message?board.id=140&message.id=9942#M9942');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Subir este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/print?board.id=140&message.id=9942&format=one');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Imprimir este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/print?board.id=140&message.id=9942&page=1&format=all');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Imprimir hasta el final (max 50)</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+				
+
+
+
+
+
+		<table onclick="lipopup('/ni/board/email_friend?board.id=140&message.id=9942', 'email_friend', 600, 480, 'yes', 'yes')" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Envía este mensaje a un amigo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+		
+				
+				
+
+
+
+
+
+		<table onclick="lipopup('/ni/notification?board.id=140&message.id=9942&notification.type=1', 'notification', 600, 460, 'yes', 'yes')" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Reporta este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+		
+				
+	
+
+
+
+
+		</td>
+		<td class="menubar_shadow" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td></tr>
+	<tr><td class="menubar_shadow" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	</tbody></table>
+		
+	</div>
+	
+	
+
+		
+	</td></tr>
+	<!-- /cache:cache -->
+
+
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<tr id="M9951"><td colspan="1">
+		<a name="M9951"></a>
+	
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		
+	<tbody><tr>
+	
+		<td class="subjectbar" style="padding: 0px 10px;" align="left">
+		
+			
+
+
+
+
+
+
+
+
+		<table onclick="go('/ni/board/post?board.id=140&message.reply_to_id=9951');" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td>&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/invis_002.gif" alt="Responder" title="Responder" border="0"></td>
+			<td>&nbsp;</td>
+			
+			<td class="subjectbar_text" style="font-size: 9pt;" nowrap="nowrap">Responder</td>
+			<td>&nbsp;</td>
+			
+		</tr>
+		</tbody></table>
+			
+			
+	
+	</td><td bgcolor="#e1e1e1" width="1"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="1"><br></td>
+	<td class="subjectbar" style="font-size: 9pt; padding-left: 10px;" height="20" width="100%">
+		Re: How to add a Simulation Driver Software Module?
+
+	</td>
+	
+		<td class="subjectbar" style="padding: 0px 10px 0px 0px;" align="right">
+
+
+
+
+
+
+
+
+
+
+
+
+		<table id="io_b140m9951_table" onclick="setId('9951');showLiMenu(this,'io_b140m9951','right',false);" ondblclick="setId('9951');showLiMenu(this,'io_b140m9951','right',false);" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			
+				<td nowrap="nowrap"><a class="subjectbar_text" style="font-size: 9pt;">Opciones</a></td>
+				
+			<td>&nbsp;&nbsp;</td>
+			<td><img src="MensajeForo_files/button_options.gif" alt="Opciones" title="Opciones" border="0"></td>
+			<td>&nbsp;</td></tr>
+		</tbody></table>
+		
+		</td></tr>
+		
+	<tr>
+	
+		<td class="msg_user_cell" valign="top" width="150">
+		
+			 
+
+
+
+
+
+
+
+
+
+<a href="http://forums.ni.com/ni/view_profile?user.id=9095" class="auth_text" style="font-weight: bold;">	
+<img src="MensajeForo_files/proven_regular.gif" alt="" border="0"> <span style="color: rgb(51, 102, 204);">gagi1</span></a>
+			<br>
+			
+			<span style="font-size: 9pt;">
+			Proven Regular<br>
+			
+			</span>
+			
+
+
+			
+			<br>
+			
+				<img src="MensajeForo_files/p.gif" alt="" border="0" height="8" width="150"><br>
+				
+			<a href="http://forums.ni.com/ni/view_profile?user.id=9095">
+
+
+
+
+
+
+
+
+
+<img src="MensajeForo_files/bluefish.gif" alt="gagi1" border="2" height="36" width="36"></a><br>
+			
+
+
+			
+			<p>
+			
+
+
+
+
+
+
+<span style="font-size: 9pt; font-weight: normal;">
+Respuesta <a href="http://forums.ni.com/ni/board/message?board.id=140&amp;message.id=9951#M9951">2</a> de 3
+</span>
+
+			<br><img src="MensajeForo_files/p.gif" height="6" width="1"><br>
+			<span style="font-size: 9pt; font-weight: normal;">
+			
+					137 visitas<br>
+					
+			</span>
+			
+			<img src="MensajeForo_files/icon_rating_5.gif" alt="1 rating - 5.0 average" title="1 rating - 5.0 average" border="0">
+			
+		</p></td>
+		
+		<td rowspan="2" bgcolor="#e1e1e1" width="1"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="1"><br></td>
+	
+		<td colspan="2" class="msg_text_cell" style="text-align: justify;" valign="top" width="100%">
+			Hello Mario,<br><br>Your
+question/request is a valid one but unfortunately, at this time, the
+functionality to add, modify, or remove a simulation driver software
+module is not implemented in the IVI category in MAX. <br><br>If you
+send us your IviConfigurationStore.xml file (found under the Program
+Files\IVI\Data directory), we can modify it for you. Please contact us
+at instrument.drivers@ni.com and specify how you want to name your
+custom simulation driver software modules and DLLs.<br><br>I hope this helps.<br><br>Best Regards,<br><br>Vesna Jadric<br>Instrument Drivers/IVI<br>National Instruments	
+		</td></tr>
+		<tr>
+		
+		<td class="msg_date_cell" nowrap="nowrap" valign="bottom">
+		<span style="font-size: 9pt; font-weight: normal;">
+		 <span class="date_text">01-12-2005</span> <span class="time_text">05:50 PM</span>
+		</span>
+		</td>
+
+		
+			<td colspan="2" class="msg_rating_cell" nowrap="nowrap" valign="bottom">
+			
+				<input name="dest_url" value="%2Fni%2Fboard%2Fmessage%3Fboard.id%3D140%26message.id%3D9951%26a%23M9951" type="hidden">
+					<input value="rate_message" name="action" type="hidden">
+					<input value="3Q2Z22gblI" name="ticket" type="hidden">
+					<input value="140" name="board.id" type="hidden">
+					<input value="9951" name="message.id" type="hidden">
+					<table align="right" border="0" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				
+					<form name="rating_9951" method="post" action="/ni/action?ticket=3Q2Z22gblI"></form>
+					<td style="font-weight: bold;" nowrap="nowrap">dele puntos a este mensajes&nbsp;</td>
+					<td><input name="rating" value="10" onclick="javascript:document.rating_9951.submit();" type="radio"></td>
+					<td><span class="text_smallest">1</span></td>
+					<td><input name="rating" value="20" onclick="javascript:document.rating_9951.submit();" type="radio"></td>
+					<td><span class="text_smallest">2</span></td>
+					<td><input name="rating" value="30" onclick="javascript:document.rating_9951.submit();" type="radio"></td>
+					<td><span class="text_smallest">3</span></td>
+					<td><input name="rating" value="40" onclick="javascript:document.rating_9951.submit();" type="radio"></td>
+					<td><span class="text_smallest">4</span></td>
+					<td><input name="rating" value="50" onclick="javascript:document.rating_9951.submit();" type="radio"></td>
+					<td nowrap="nowrap"><span class="text_smallest">5 (Lo mejor)</span></td>
+					
+					
+					</tr>
+				</tbody></table>
+				
+		</td>
+			
+		</tr>
+	</tbody></table>
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+			<div id="io_b140m9951" class="dropdown_menu" style="visibility: hidden;">
+			
+		
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="270">
+	<tbody><tr><td class="menubar_highlight" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	<tr><td class="menubar_highlight" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td>
+		<td style="background-color: rgb(230, 239, 246);">
+		
+	
+					
+
+
+
+
+
+		<table onclick="go('/ni/action?action=mark_message_unread&board.id=140&message.id=9951&dest_url=%2Fni%2Fboard%3Fboard.id%3D140&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Marca el mensaje como nuevo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+					
+						
+
+
+
+
+
+		<table onclick="go('/ni/action?action=bookmark_message&board.id=140&message.id=9951&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Agrega este mensaje a mis Favoritos</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+						
+						
+
+
+
+
+
+		<table onclick="go('/ni/action?action=subscribe_message&board.id=140&message.id=9951&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Notifícame cuando hay nuevas respuestas</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+						
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">
+<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+<tr><td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+</tbody></table>
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/message?board.id=140&message.id=9951#M9951');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Subir este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/print?board.id=140&message.id=9951&format=one');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Imprimir este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/print?board.id=140&message.id=9951&page=1&format=all');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Imprimir hasta el final (max 50)</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+				
+
+
+
+
+
+		<table onclick="lipopup('/ni/board/email_friend?board.id=140&message.id=9951', 'email_friend', 600, 480, 'yes', 'yes')" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Envía este mensaje a un amigo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+		
+				
+				
+
+
+
+
+
+		<table onclick="lipopup('/ni/notification?board.id=140&message.id=9951&notification.type=1', 'notification', 600, 460, 'yes', 'yes')" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Reporta este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+		
+				
+	
+
+
+
+
+		</td>
+		<td class="menubar_shadow" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td></tr>
+	<tr><td class="menubar_shadow" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	</tbody></table>
+		
+	</div>
+	
+	
+
+		
+	</td></tr>
+	<!-- /cache:cache -->
+
+
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<tr id="M9953"><td colspan="1">
+		<a name="M9953"></a>
+	
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		
+	<tbody><tr>
+	
+		<td class="subjectbar" style="padding: 0px 10px;" align="left">
+		
+			
+
+
+
+
+
+
+
+
+		<table onclick="go('/ni/board/post?board.id=140&message.reply_to_id=9953');" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td>&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/invis_002.gif" alt="Responder" title="Responder" border="0"></td>
+			<td>&nbsp;</td>
+			
+			<td class="subjectbar_text" style="font-size: 9pt;" nowrap="nowrap">Responder</td>
+			<td>&nbsp;</td>
+			
+		</tr>
+		</tbody></table>
+			
+			
+	
+	</td><td bgcolor="#e1e1e1" width="1"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="1"><br></td>
+	<td class="subjectbar" style="font-size: 9pt; padding-left: 10px;" height="20" width="100%">
+		Re: How to add a Simulation Driver Software Module?
+
+	</td>
+	
+		<td class="subjectbar" style="padding: 0px 10px 0px 0px;" align="right">
+
+
+
+
+
+
+
+
+
+
+
+
+		<table id="io_b140m9953_table" onclick="setId('9953');showLiMenu(this,'io_b140m9953','right',false);" ondblclick="setId('9953');showLiMenu(this,'io_b140m9953','right',false);" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			
+				<td nowrap="nowrap"><a class="subjectbar_text" style="font-size: 9pt;">Opciones</a></td>
+				
+			<td>&nbsp;&nbsp;</td>
+			<td><img src="MensajeForo_files/button_options.gif" alt="Opciones" title="Opciones" border="0"></td>
+			<td>&nbsp;</td></tr>
+		</tbody></table>
+		
+		</td></tr>
+		
+	<tr>
+	
+		<td class="msg_user_cell" valign="top" width="150">
+		
+			 
+
+
+
+
+
+
+
+
+
+<a href="http://forums.ni.com/ni/view_profile?user.id=38566" class="auth_text" style="font-weight: bold;">	
+<img src="MensajeForo_files/regular.gif" alt="" border="0"> <span style="color: rgb(102, 102, 102);">marioob_</span></a>
+			<br>
+			
+			<span style="font-size: 9pt;">
+			Regular<br>
+			
+			</span>
+			
+
+
+			
+			<br>
+			
+				<img src="MensajeForo_files/p.gif" alt="" border="0" height="8" width="150"><br>
+				
+			<a href="http://forums.ni.com/ni/view_profile?user.id=38566">
+
+
+
+
+
+
+
+
+
+<img src="MensajeForo_files/greenday.gif" alt="marioob_" border="2" height="36" width="36"></a><br>
+			
+
+
+			
+			<p>
+			
+
+
+
+
+
+
+<span style="font-size: 9pt; font-weight: normal;">
+Respuesta <a href="http://forums.ni.com/ni/board/message?board.id=140&amp;message.id=9953#M9953">3</a> de 3
+</span>
+
+			<br><img src="MensajeForo_files/p.gif" height="6" width="1"><br>
+			<span style="font-size: 9pt; font-weight: normal;">
+			
+					130 visitas<br>
+					
+			</span>
+			
+			
+			
+		</p></td>
+		
+		<td rowspan="2" bgcolor="#e1e1e1" width="1"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="1"><br></td>
+	
+		<td colspan="2" class="msg_text_cell" style="text-align: justify;" rowspan="2" valign="top" width="100%">
+So, let me get this straight, just by modifying the XML file to meet my
+requirements, I'll be able to add my own Simulation Driver Software
+Modules.<br><br>It's
+very kind of you to make the changes for me; but, since I'm working on
+a large project and I'll need to modify it very often, I'll learn to do
+it by myself or, at least, give it a try: I've taken a look inside the
+XML file, and it doesn't look difficult.<br><br>I think this functionality should be included in the next release of MAX, to make things easier...<br><br><br>THANK YOU AGAIN!<br>¡GRACIAS!	
+		</td></tr>
+		<tr>
+		
+		<td class="msg_date_cell" nowrap="nowrap" valign="bottom">
+		<span style="font-size: 9pt; font-weight: normal;">
+		 <span class="date_text">01-12-2005</span> <span class="time_text">06:43 PM</span>
+		</span>
+		</td>
+
+		
+		</tr>
+	</tbody></table>
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+			<div id="io_b140m9953" class="dropdown_menu" style="visibility: hidden;">
+			
+		
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="270">
+	<tbody><tr><td class="menubar_highlight" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	<tr><td class="menubar_highlight" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td>
+		<td style="background-color: rgb(230, 239, 246);">
+		
+	
+					
+
+
+
+
+
+		<table onclick="go('/ni/action?action=mark_message_unread&board.id=140&message.id=9953&dest_url=%2Fni%2Fboard%3Fboard.id%3D140&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Marca el mensaje como nuevo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+					
+						
+
+
+
+
+
+		<table onclick="go('/ni/action?action=bookmark_message&board.id=140&message.id=9953&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Agrega este mensaje a mis Favoritos</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+						
+						
+
+
+
+
+
+		<table onclick="go('/ni/action?action=subscribe_message&board.id=140&message.id=9953&ticket=3Q2Z22gblI');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Notifícame cuando hay nuevas respuestas</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+						
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">
+<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+<tr><td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="250"></td></tr>
+</tbody></table>
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/message?board.id=140&message.id=9953#M9953');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Subir este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/print?board.id=140&message.id=9953&format=one');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Imprimir este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+
+
+
+
+
+		<table onclick="go('/ni/board/print?board.id=140&message.id=9953&page=1&format=all');" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Imprimir hasta el final (max 50)</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+			
+			
+				
+
+
+
+
+
+		<table onclick="lipopup('/ni/board/email_friend?board.id=140&message.id=9953', 'email_friend', 600, 480, 'yes', 'yes')" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Envía este mensaje a un amigo</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+		
+				
+				
+
+
+
+
+
+		<table onclick="lipopup('/ni/notification?board.id=140&message.id=9953&notification.type=1', 'notification', 600, 460, 'yes', 'yes')" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr class="clickable" onmouseover="style.backgroundColor='#C1D6E7'" onmouseout="style.backgroundColor='#E6EFF6'">
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td>
+			<td nowrap="nowrap" width="100%"><span class="menubar_text">Reporta este mensaje</span></td>
+			<td width="20"><img src="MensajeForo_files/p.gif" alt="" height="22" width="20"></td></tr>
+		</tbody></table>
+		
+				
+	
+
+
+
+
+		</td>
+		<td class="menubar_shadow" width="1"><img src="MensajeForo_files/p.gif" alt="" height="10" width="1"></td></tr>
+	<tr><td class="menubar_shadow" colspan="3"><img src="MensajeForo_files/p.gif" alt="" height="1" width="20"></td></tr>
+	</tbody></table>
+		
+	</div>
+	
+	
+
+		
+	</td></tr>
+	<!-- /cache:cache -->
+
+
+			
+		
+
+
+
+
+
+	<tr><td colspan="1">
+		<table border="0" cellpadding="3" cellspacing="0" width="100%">
+			<tbody><tr><td style="padding-left: 10px;" class="linear_paging_text">Saltar la página: &nbsp;
+	
+			<span style="font-size: 12pt;"><b>1</b></span>
+			
+				</td>
+			</tr>
+		</tbody></table>
+	</td></tr>		
+		
+
+
+
+
+
+
+
+
+	<tr><td colspan="1" class="menubar">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+	
+	<td width="100%">&nbsp;</td>
+	<td>
+
+
+
+
+
+
+
+		<table class="menubar" onclick="go('/ni/board?board.id=140&page_of_message_id=9942');" onmouseover="this.className='menubar_selected'" onmouseout="this.className='menubar'" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td height="28">&nbsp;&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/button_message_listing.gif" alt="Indice de temas" title="Indice de temas" border="0"></td>
+			<td>&nbsp;&nbsp;</td>
+			
+			<td nowrap="nowrap"><span class="menubar_text">Indice de temas</span></td>
+			<td>&nbsp;&nbsp;</td>
+			
+	</tr>
+	</tbody></table>
+		</td>
+	<td>	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td>
+		<td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td></tr>
+	</tbody></table></td>
+	
+			<td>
+
+
+
+
+
+
+
+		<table class="menubar" onclick="go('/ni/board/message?board.id=140&message.id=9886');" onmouseover="this.className='menubar_selected'" onmouseout="this.className='menubar'" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td height="28">&nbsp;&nbsp;</td>
+		
+			<td><img src="MensajeForo_files/button_previous_message.gif" alt="Tema anterior" title="Tema anterior" border="0"></td>
+			<td>&nbsp;&nbsp;</td>
+			
+			<td nowrap="nowrap"><span class="menubar_text">Tema anterior</span></td>
+			<td>&nbsp;&nbsp;</td>
+			
+	</tr>
+	</tbody></table>
+		</td>
+			
+		<td>	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td class="menubar_shadow"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td>
+		<td class="menubar_highlight"><img src="MensajeForo_files/p.gif" alt="" border="0" height="24" width="1"></td></tr>
+	</tbody></table></td>
+		
+			<td>
+
+
+
+
+
+
+
+		<table class="menubar" onclick="go('/ni/board/message?board.id=140&message.id=4927');" onmouseover="this.className='menubar_selected'" onmouseout="this.className='menubar'" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr class="clickable">
+			<td height="28">&nbsp;&nbsp;</td>
+		
+			<td nowrap="nowrap"><span class="menubar_text">Próximo tema</span></td>
+			<td>&nbsp;&nbsp;</td>
+			
+			<td><img src="MensajeForo_files/button_next_message.gif" alt="Próximo tema" title="Próximo tema" border="0"></td>
+			<td>&nbsp;&nbsp;</td>
+			
+	</tr>
+	</tbody></table>
+		</td>
+			
+	</tr>
+	</tbody></table>
+	</td></tr>
+			
+	
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+<tr><td colspan="1" class="searchbar">
+	
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr><td><img src="MensajeForo_files/p.gif" alt="" border="0" height="2" width="600"><br></td></tr>
+		</tbody></table>
+		
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+	
+		<td>
+			<form name="li_search" action="/ni/search">
+			
+      	<input name="board_id" value="140" type="hidden">
+      	
+		<input name="submitted" value="true" type="hidden">
+		<input class="input" size="30" name="q" value="" type="text">
+		</form></td>
+		<td>&nbsp;</td>
+		
+			<td nowrap="nowrap"><a href="javascript:document.forms['li_search'].submit();" onmouseover="self.status='Buscar';return true;" onmouseout="self.status='';return true;"><img src="MensajeForo_files/button_search.gif" alt="Buscar" title="Buscar" border="0"></a></td>
+			
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td style="font-size: 8pt;" nowrap="nowrap">
+		
+			&nbsp;<a href="http://forums.ni.com/ni/search?type=user" class="searchbar_text" style="font-size: 8pt;">Buscar usuario</a>
+			
+				&nbsp;<span style="color: rgb(51, 102, 204);">·</span>&nbsp;
+				
+			<a href="http://forums.ni.com/ni/search?advanced=true" class="searchbar_text" style="font-size: 8pt;">Búsqueda Avanzada</a>
+			
+		</td>
+		
+	<td style="font-size: 8pt;" align="right" nowrap="nowrap" width="100%">
+		&nbsp;
+	</td>
+	
+		
+		<td align="right">
+		<a href="http://www.lithium.com/bounce.asp?community.id=ni" target="_blank"><img src="MensajeForo_files/button_lithium_logo.gif" alt="Powered By Lithium" title="Powered By Lithium" border="0" height="18" width="110"></a><br>
+		</td>
+	
+	</tr></tbody></table>
+
+	
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr><td><img src="MensajeForo_files/p.gif" alt="" border="0" height="1" width="600"><br></td></tr>
+		</tbody></table>
+	
+
+</td></tr>
+
+			
+	
+
+		</tbody></table>
+		
+	
+		
+		
+
+
+
+<!--stopindex--><span class="noindex">
+<!-- Begin Footer -->
+<div style="margin-left: 10px; margin-right: 10px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td colspan="3"><img src="MensajeForo_files/invis.gif" alt="" border="0" height="25" width="1"></td>
+  </tr>
+  <tr>
+    <td background="MensajeForo_files/dot_line.gif"><img src="MensajeForo_files/invis.gif" alt="" border="0" height="1" width="1"></td>
+  </tr>
+  <tr align="center" valign="bottom">
+    <td align="left" height="25" nowrap="nowrap">
+      <a href="http://www.ni.com/profile/" style="font-size: 11px; font-family: Arial,Helvetica,sans-serif;">My Profile</a> | <a href="http://www.ni.com/legal/privacy/unitedstates/us/" style="font-size: 11px; font-family: Arial,Helvetica,sans-serif;">Privacy</a> | <a href="http://www.ni.com/legal/" style="font-size: 11px; font-family: Arial,Helvetica,sans-serif;">Legal</a> | <a href="http://sine.ni.com/apps/we/nicc.call_me?p_lang_id=US" style="font-size: 11px; font-family: Arial,Helvetica,sans-serif;">Contact NI</a>   <span style="font-size: 9px; letter-spacing: 1px; font-family: Arial,Helvetica,sans-serif; color: rgb(149, 149, 149);">© 2005 National Instruments Corporation.  All rights reserved.</span>   |   <a href="http://www.ni.com/cgi-bin/mail_me.cgi"><img src="MensajeForo_files/email.gif" alt="E-Mail this Page" align="middle" border="0" height="11" width="16"></a> <a href="http://www.ni.com/cgi-bin/mail_me.cgi" style="font-size: 11px; font-family: Arial,Helvetica,sans-serif;">E-Mail this Page</a></td>
+  </tr>
+  <tr>
+    <td colspan="3"><img src="MensajeForo_files/invis.gif" alt="" border="0" height="10" width="1"></td>
+  </tr>
+</tbody></table>
+</div>
+<!-- End Footer --><script language="JavaScript1.2" src="MensajeForo_files/tag-footer.js" type="text/javascript"></script></span>
+		
+	
+	
+
+
+</span></center>
+</body></html>

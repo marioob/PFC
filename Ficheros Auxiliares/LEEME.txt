@@ -1,0 +1,3 @@
+Si queremos que los ficheros ejcutables de configuracion previa funcionen
+sin tener LabWindows instalado, debemos copiar las 2 DLLs y la carpeta en
+el directorio C:\WINDOWS\system32
